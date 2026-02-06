@@ -1,1 +1,85 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Cuts - Comparison</title>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h2>UTD Budget</h2>
+            <ul>
+                <li><a href="index.html">Fall 25 - Spring 26 Budget</a></li>
+                <li><a href="budgetCuts.html">Budget Cuts</a></li>
+                <li><a href="#">Budget Over Time</a></li>
+                <li><a href="#">Student Fees</a></li>
+                <li><a href="schoolBudgets.html" class="active">Budget by School</a></li>
+                <li><a href="#">Auxiliary Budget</a></li>
+                <li><a href="#">Credits</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <h1>Budget By School</h1>
+            </header>
+
+            <section class="charts-grid">
+
+                <div class="chart-card">
+                    <h3>JSOM Expenses</h3>
+                    <div id="chart_JSOM_Expenses"></div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>NSM Expenses</h3>
+                    <div id="chart_NSM_Expenses"></div>
+                </div>
+
+                 <div class="chart-card">
+                    <h3>BBS Expenses</h3>
+                    <div id="chart_BBS_Expenses"></div>
+                </div>
+
+                 <div class="chart-card">
+                    <h3>EPPS Expenses</h3>
+                    <div id="chart_EPPS_Expenses"></div>
+                </div>
+
+                 <div class="chart-card">
+                    <h3>IS Expenses</h3>
+                    <div id="chart_IS_Expenses"></div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>AHT Expenses</h3>
+                    <div id="chart_AHT_Expenses"></div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>AHT Revenue</h3>
+                    <div id="chart_AHT_Revenue"></div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Total Expenses by School</h3>
+                    <div id="chart_Expenses_School"></div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

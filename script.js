@@ -341,6 +341,176 @@ am5.ready(function() {
     }
 
     // ============================================================
+    // Budget By School Graph Builder
+    // ============================================================
+
+    function buildExpensesGraphs(divID) {
+
+        let datasetKey = "";
+
+        if (divID === "chart_JSOM_Expenses") datasetKey = "JSOM_Expense";
+        if (divID === "chart_NSM_Expenses") datasetKey = "NSM_Expense";
+        if (divID === "chart_AHT_Expenses") datasetKey = "AHT_Expense";
+        if (divID === "chart_BBS_Expenses") datasetKey = "bbs_Expense";
+        if (divID === "chart_EPPS_Expenses") datasetKey = "epps_Expense";
+        if (divID === "chart_IS_Expenses") datasetKey = "is_Expense";
+
+        buildFY26Graphs(divID, datasetKey, true);
+
+    }
+
+    function buildRevenueGraphs(divID) {
+
+        let datasetKey = "";
+
+        if (divID === "chart_AHT_Revenue") datasetKey = "AHT_Revenue";
+
+        buildFY26Graphs(divID, datasetKey, true);
+    }
+
+    function buildExpensesBySchoolGraph(divID) {
+
+        var root = am5.Root.new(divID);
+        root.setThemes([am5themes_Animated.new(root)]);
+
+        var container = root.container.children.push(am5.Container.new(root, {
+            layout: root.horizontalLayout,
+            width: am5.percent(100),
+            height: am5.percent(100)
+        }));
+
+        fetch("data.json")
+            .then(res => res.json())
+            .then(fullData => {
+
+                let data = fullData["Expenses_By_School"];
+
+                data.sort((a, b) => a.expenseAmount - b.expenseAmount);
+
+                // ================= BAR CHART =================
+                var barChart = container.children.push(am5xy.XYChart.new(root, {
+                    width: am5.percent(60),
+                    layout: root.verticalLayout,
+                    paddingRight: 30
+                }));
+
+                var yAxis = barChart.yAxes.push(am5xy.CategoryAxis.new(root, {
+                    categoryField: "school",
+                    renderer: am5xy.AxisRendererY.new(root, {
+                        inversed: true,
+                        cellStartLocation: 0.1,
+                        cellEndLocation: 0.9
+                    })
+                }));
+
+                yAxis.get("renderer").labels.template.setAll({
+                    fontSize: 12,
+                    fontWeight: "500",
+                    maxWidth: 150,
+                    oversizedBehavior: "wrap",
+                    textAlign: "right"
+                });
+
+                var xAxis = barChart.xAxes.push(am5xy.ValueAxis.new(root, {
+                    renderer: am5xy.AxisRendererX.new(root, { strokeOpacity: 0 }),
+                    min: 0,
+                    extraMax: 0.1,
+                    numberFormat: "$#.#a"
+                }));
+
+                var barSeries = barChart.series.push(am5xy.ColumnSeries.new(root, {
+                    xAxis,
+                    yAxis,
+                    valueXField: "expenseAmount",
+                    categoryYField: "school",
+                    sequencedInterpolation: true
+                }));
+
+                barSeries.columns.template.setAll({
+                    height: am5.percent(70),
+                    cornerRadiusBR: 5,
+                    cornerRadiusTR: 5
+                });
+
+                barSeries.columns.template.adapters.add("fill", (fill, target) =>
+                    target.dataItem?.dataContext?.color
+                        ? am5.color(target.dataItem.dataContext.color)
+                        : fill
+                );
+
+                barSeries.columns.template.adapters.add("stroke", (stroke, target) =>
+                    target.dataItem?.dataContext?.color
+                        ? am5.color(target.dataItem.dataContext.color)
+                        : stroke
+                );
+
+                barSeries.set("maskBullets", false);
+                barSeries.bullets.push(() =>
+                    am5.Bullet.new(root, {
+                        locationX: 1,
+                        sprite: am5.Label.new(root, {
+                            text: "{valueX.formatNumber('$#.#a')}",
+                            centerY: am5.p50,
+                            paddingLeft: 5,
+                            fontWeight: "bold",
+                            populateText: true
+                        })
+                    })
+                );
+
+                // ================= PIE CHART =================
+                var pieChart = container.children.push(am5percent.PieChart.new(root, {
+                    layout: root.verticalLayout,
+                    innerRadius: am5.percent(60),
+                    width: am5.percent(40)
+                }));
+
+                var pieSeries = pieChart.series.push(am5percent.PieSeries.new(root, {
+                    categoryField: "school",
+                    valueField: "expenseAmount",
+                    alignLabels: false
+                }));
+
+                pieSeries.slices.template.adapters.add("fill", (fill, target) =>
+                    target.dataItem?.dataContext?.color
+                        ? am5.color(target.dataItem.dataContext.color)
+                        : fill
+                );
+
+                pieSeries.slices.template.adapters.add("stroke", (stroke, target) =>
+                    target.dataItem?.dataContext?.color
+                        ? am5.color(target.dataItem.dataContext.color)
+                        : stroke
+                );
+
+                pieSeries.labels.template.setAll({
+                    text: "{valuePercentTotal.formatNumber('#.0')}%",
+                    fontWeight: "bold",
+                    inside: false
+                });
+
+                pieSeries.ticks.template.set("forceHidden", true);
+
+                // Center total
+                let total = getTotal(data, "expenseAmount");
+                pieChart.seriesContainer.children.push(am5.Label.new(root, {
+                    textAlign: "center",
+                    centerX: am5.percent(50),
+                    centerY: am5.percent(50),
+                    text: `[fontSize:10px]TOTAL EXPENSE[/]\n[bold fontSize:18px]${root.numberFormatter.format(total, "$#.0a")}[/]`
+                }));
+
+                yAxis.data.setAll(data);
+                barSeries.data.setAll(data);
+                pieSeries.data.setAll(data);
+
+                barSeries.appear(1000, 100);
+                pieSeries.appear(1000, 100);
+            });
+    }
+
+
+    // ============================================================
     // EXECUTE (Only if elements exist)
     // ============================================================
     
@@ -384,6 +554,35 @@ am5.ready(function() {
     // 3. Expense Comparison
     if (document.getElementById("chart_Expense25") && document.getElementById("chart_ExpenseChange26")) {
         buildComparison("chart_Expense25", "chart_ExpenseChange26", "FY25_Expense", "FY26_Expense", true);
+    }
+
+    // ============================================================
+    // Page: Budget By School
+    // ============================================================
+
+    // 1. JSOM Expenses
+    if (document.getElementById("chart_JSOM_Expenses")) {
+        buildExpensesGraphs("chart_JSOM_Expenses");
+    }
+
+    // 2. NSM Expenses
+    if (document.getElementById("chart_NSM_Expenses")) {
+        buildExpensesGraphs("chart_NSM_Expenses");
+    }
+
+    // 3. AHT Expenses
+    if (document.getElementById("chart_AHT_Expenses")) {
+        buildExpensesGraphs("chart_AHT_Expenses");
+    }
+
+    // 4. AHT Revenue
+    if (document.getElementById("chart_AHT_Revenue")) {
+        buildRevenueGraphs("chart_AHT_Revenue");
+    }
+
+    // 5. Expenses By School
+    if (document.getElementById("chart_Expenses_School")) {
+        buildExpensesBySchoolGraph("chart_Expenses_School");
     }
 
 });
