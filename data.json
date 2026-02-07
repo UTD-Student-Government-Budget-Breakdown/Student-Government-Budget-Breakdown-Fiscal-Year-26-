@@ -167,6 +167,68 @@
   { "expenseType": "Scholarships and Fellowships", "expenseAmount": 47845331, "color": "#fd8d3c" },
   { "expenseType": "Student Services", "expenseAmount": 29072557, "color": "#fc4e2a" },
   { "expenseType": "Public Service", "expenseAmount": 14231641, "color": "#e31a1c" }
-]
+],
 
+"_section3": "Data for Budget Over Time Page",
+
+"_section4": "Data for Student Fees Page",
+
+"_section5": "Data for Budget by School Page",
+
+"JSOM_Expense":[
+  { "expenseType": "Salaries & Wages (Education)", "expenseAmount": 21889331, "color": "#0bbbbb" },
+  { "expenseType": "Other Research Expenses", "expenseAmount": 306000, "color": "#fc4e2a" },
+  { "expenseType": "Accounting & Business Law Rese", "expenseAmount": 368500, "color": "#9ebcda" },
+  { "expenseType": "Cohort MBA", "expenseAmount": 160000, "color": "#b10026" },
+  { "expenseType": "Ctr Excellence In Corp Govern", "expenseAmount": 68802, "color": "#0bbbbb" },
+  { "expenseType": "Ctr Innov & Entrepreneurship", "expenseAmount": 44769, "color": "#2ad8fc" },
+  { "expenseType": "Ctr Intelligent Supply Network", "expenseAmount": 2476, "color": "#3cacfd" },
+  { "expenseType": "Executive Education", "expenseAmount": 1301620, "color": "#1ae3e1" },
+  { "expenseType": "Finance & MgrlEcon Research", "expenseAmount": 450500, "color": "#2ad8fc" },
+  { "expenseType": "Healthcare Management Research", "expenseAmount": 54500, "color": "#1ae3e1" },
+  { "expenseType": "Information Systems", "expenseAmount": 429500, "color": "#3cacfd" },
+  { "expenseType": "Management", "expenseAmount": 52139217, "color": "#00b18b" },
+  { "expenseType": "Management External Affairs", "expenseAmount": 207135, "color": "#bb0b0b" },
+  { "expenseType": "Marketing Research", "expenseAmount": 267000, "color": "#e31a1c" },
+  { "expenseType": "Operations Management", "expenseAmount": 353995, "color": "#dabc9e" },
+  { "expenseType": "Org, Strategy & Intnl Mgt Research", "expenseAmount": 326000, "color": "#fd8d3c" },
+  { "expenseType": "Other Research", "expenseAmount": 100002, "color": "#00b18b" }
+],
+
+"NSM_Expense":[
+  { "expenseType": "Salaries & Wages (Education)", "expenseAmount": 23000656, "color": "#00b18b" },
+  { "expenseType": "Salaries & Wages (Research)", "expenseAmount": 80340, "color": "#b10026" },
+  { "expenseType": "Other Research Expenses", "expenseAmount": 2833086, "color": "#1ae3e1" },
+  { "expenseType": "Biological Sciences", "expenseAmount": 1940941, "color": "#2ad8fc" },
+  { "expenseType": "Chemistry", "expenseAmount": 1282299, "color": "#9ebcda" },
+  { "expenseType": "Mathematical Sciences", "expenseAmount": 1820320, "color": "#3cacfd" },
+  { "expenseType": "NS&M Deans Office", "expenseAmount": 4969524, "color": "#0bbbbb" },
+  { "expenseType": "Nanotech Institute", "expenseAmount": 126935, "color": "#bb0b0b" },
+  { "expenseType": "Physics", "expenseAmount": 1033290, "color": "#dabc9e" },
+  { "expenseType": "Science/Math Education", "expenseAmount": 302632, "color": "#e31a1c" },
+  { "expenseType": "Space Sciences", "expenseAmount": 431495, "color": "#fc4e2a" },
+  { "expenseType": "Sustain Earth Systems Science", "expenseAmount": 514821, "color": "#fd8d3c" }
+],
+
+"AHT_Expense":[
+  { "expenseType": "Salaries & Wages (Education)", "expenseAmount": 12837254, "color": "#00b18b" },
+  { "expenseType": "Other Research Expenses", "expenseAmount": 163000, "color": "#0bbbbb" }
+],
+
+"AHT_Revenue":[
+  { "revenueType": "Art and Performance", "revenueAmount": 117000, "color": "#0bbbbb" },
+  { "revenueType": "Arts Humanities & Technology", "revenueAmount": 9065300, "color": "#00b18b" },
+  { "revenueType": "Centers For Values", "revenueAmount": 5100, "color": "#1ae3e1" }
+],
+
+"Expenses_By_School":[
+  { "school": "BBS", "expenseAmount": 23339079, "color": "#2ad8fc" },
+  { "school": "ECS", "expenseAmount": 62517877, "color": "#0bbbbb" },
+  { "school": "EPPS", "expenseAmount": 14291790, "color": "#9ebcda" },
+  { "school": "IS", "expenseAmount": 2696966, "color": "#fd8d3c" },
+  { "school": "JSOM", "expenseAmount": 75861155, "color": "#00b18b" },
+  { "school": "NSM", "expenseAmount": 38144913, "color": "#1ae3e1" },
+  { "school": "AHT", "expenseAmount": 13000254, "color": "#dabc9e" },
+  { "school": "Other Instructional Support", "expenseAmount": 16347257, "color": "#3cacfd" }
+]
 }
