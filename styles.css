@@ -114,6 +114,18 @@ header p {
     padding-left: 10px;
 }
 
+/* Budget Cuts page helpers (classes already used in budgetCuts.html) */
+.year-header {
+    margin: 14px 0 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.mt-4 {
+    margin-top: 18px;
+}
+
 /* =========================================
    4. SPECIFIC CHART DIMENSIONS
    ========================================= */
@@ -126,6 +138,7 @@ header p {
 #chart_Non-operating_Revenue25, #chart_Non-operating_Revenue26, #chart_Non-operating_RevenueChange26,
 #chart_Expense25, #chart_Expense26, #chart_ExpenseChange26,
 #chart_ecs_Expense,
+#housingChart, #urecChart, #parkingChart,
 #chart_StudentFeesTotals, #chart_StudentFeesOverview, #chart_MandatoryFeeBreakdown, #chart_ProgramFeesBreakdown {
     width: 100%;
     height: 500px; /* Tall enough for both Pie and Bar */
@@ -182,3 +195,4 @@ header p {
     background: #f7f9fb;
     font-weight: 800;
 }
+
