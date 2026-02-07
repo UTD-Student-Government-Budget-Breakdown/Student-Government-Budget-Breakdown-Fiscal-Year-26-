@@ -823,8 +823,6 @@ am5.ready(function() {
         buildStudentFeesTable("studentFeesTable", "FY26_TuitionAndStudentFees_Totals", "FY26_MandatoryFees", "FY26_ProgramCourseOtherFees");
     }
 
-});
-
     // ============================================================
     // Page: Auxiliary Budget
     // ============================================================
