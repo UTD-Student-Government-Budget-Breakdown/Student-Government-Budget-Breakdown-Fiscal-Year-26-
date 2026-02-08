@@ -340,6 +340,248 @@ am5.ready(function() {
         });
     }
 
+
+function buildBOTGraphs(divID, datasetKey, isExpense) {
+
+    // =====================
+    // ROOT + THEME
+    // =====================
+    var root = am5.Root.new(divID);
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    root.numberFormatter.setAll({
+    numberFormat: "#.##a",
+    bigNumberPrefixes: [
+        { number: 1e3, suffix: "K" },
+        { number: 1e6, suffix: "M" },
+        { number: 1e9, suffix: "B" },
+        { number: 1e12, suffix: "T" }
+  ]
+});
+
+    var mainContainer = root.container.children.push(am5.Container.new(root, {
+        layout: root.verticalLayout,
+        width: am5.percent(100),
+        height: am5.percent(100)
+    }));
+
+    // =====================
+    // KEY DEFINITIONS
+    // =====================
+    var amountKey = isExpense ? "expenseAmount" : "revenueAmount";
+    var typeKey   = isExpense ? "expenseType"   : "revenueType";
+    var yearKey   = "year";
+
+    const applyColor = (graphics, target) =>
+        target.dataItem?.dataContext?.color
+            ? am5.color(target.dataItem.dataContext.color)
+            : graphics;
+
+    // =====================
+    // STACKED BAR CHART
+    // =====================
+    var barChart = mainContainer.children.push(am5xy.XYChart.new(root, {
+        height: am5.percent(60),
+        layout: root.verticalLayout,
+        panX: false,
+        panY: false
+    }));
+
+    var barXAxis = barChart.xAxes.push(am5xy.CategoryAxis.new(root, {
+        categoryField: yearKey,
+        renderer: am5xy.AxisRendererX.new(root, {})
+    }));
+
+    var barYAxis = barChart.yAxes.push(am5xy.ValueAxis.new(root, {
+        renderer: am5xy.AxisRendererY.new(root, {}),
+        min: 0,
+        numberFormat: "$#.#a"
+    }));
+
+    // =====================
+    // LINE CHART
+    // =====================
+    var lineChart = mainContainer.children.push(am5xy.XYChart.new(root, {
+        height: am5.percent(40),
+        layout: root.verticalLayout,
+        panX: false,
+        panY: false
+    }));
+
+    var lineXAxis = lineChart.xAxes.push(am5xy.CategoryAxis.new(root, {
+        categoryField: yearKey,
+        renderer: am5xy.AxisRendererX.new(root, {})
+    }));
+
+    var lineYAxis = lineChart.yAxes.push(am5xy.ValueAxis.new(root, {
+        renderer: am5xy.AxisRendererY.new(root, {}),
+        numberFormat: "$#.#a"
+    }));
+
+    // =====================
+    // DATA LOAD
+    // =====================
+    fetch("data.json")
+        .then(r => r.json())
+        .then(fullData => {
+
+            rawData = fullData[datasetKey];
+            if (!rawData) {
+                console.error("Missing data:", datasetKey);
+                return;
+            }
+
+            // Group by year, then sort within each year
+            const grouped = {};
+            
+            rawData.forEach(d => {
+            if (!grouped[d.year]) grouped[d.year] = [];
+            grouped[d.year].push(d);
+            });
+
+            Object.values(grouped).forEach(arr => {
+            arr.sort((a, b) => b[amountKey] - a[amountKey]);
+            });
+
+            // Flatten back into one array
+            const sortedData = Object.values(grouped).flat();
+
+            rawData = sortedData;
+
+            const totalByYear = {};
+            const yearHasNegative = {};
+
+            rawData.forEach(d => {
+                const year = d[yearKey];
+                const val  = d[amountKey];
+
+                if (val < 0) {
+                    yearHasNegative[year] = true;
+                }
+
+                if (!totalByYear[year]) {
+                    totalByYear[year] = 0;
+                }
+                totalByYear[year] += Math.abs(val);
+            });
+
+            // unique years + types
+            const years = [...new Set(rawData.map(d => d[yearKey]))];
+            const types = [...new Set(rawData.map(d => d[typeKey]))];
+
+            barXAxis.data.setAll(years.map(y => ({ [yearKey]: y })));
+            lineXAxis.data.setAll(years.map(y => ({ [yearKey]: y })));
+
+            // =====================
+            // BUILD SERIES PER TYPE
+            // =====================
+            types.forEach(type => {
+
+                const typeData = rawData.filter(d => d[typeKey] === type);
+                const typeColor = rawData.find(d => d[typeKey] === type)?.color;
+                
+                console.log(`Building series for ${type} with data:`, typeData);
+                // ---- STACKED BAR SERIES ----
+                var barSeries = barChart.series.push(am5xy.ColumnSeries.new(root, {
+                    name: type,
+                    stacked: true,
+                    xAxis: barXAxis,
+                    yAxis: barYAxis,
+                    valueYField: amountKey,
+                    categoryXField: yearKey,
+                    fill: am5.color(typeColor),
+                    stroke: am5.color(typeColor)
+                }));
+
+                if (yearHasNegative[typeData[0][yearKey]]) {
+                    barYAxis.set("min", -totalByYear[typeData[0][yearKey]] * 0.2);
+                }
+
+                barSeries.columns.template.setAll({
+                    tooltipText: "{name}\n{categoryX}: {valueY.formatNumber('$#,###')}",
+                    cornerRadiusTL: 3,
+                    cornerRadiusTR: 3,
+                    cornerRadiusBL: 3,
+                    cornerRadiusBR: 3
+                });
+
+                barSeries.bullets.push((root, series, dataItem) => {
+                    if (dataItem.dataContext[amountKey] === 0) return null;
+                    if (Math.abs(dataItem.dataContext[amountKey])/totalByYear[dataItem.dataContext[yearKey]] < 0.02) return null;
+
+                    if (dataItem.dataContext[amountKey] < 0){ 
+                        return am5.Bullet.new(root, {
+                            sprite: am5.Label.new(root, {
+                            text: "{valueY.formatNumber('$#.0a')}",
+                            fill: am5.color(0xe31a1c), // Red for negative values
+                            centerY: am5.p50,
+                            centerX: am5.p50,
+                            populateText: true,
+                            fontSize: 11,
+                            fontWeight: "1000"
+                        })
+                    });
+                    }
+
+                    return am5.Bullet.new(root, {
+                        sprite: am5.Label.new(root, {
+                            text: "{valueY.formatNumber('$#.0a')}",
+                            fill: root.interfaceColors.get("alternativeText"),
+                            centerY: am5.p50,
+                            centerX: am5.p50,
+                            populateText: true,
+                            fontSize: 14,
+                            fontWeight: "500"
+                        })
+                    });
+                });
+
+                barSeries.columns.template.adapters.add("fill", applyColor);
+                barSeries.columns.template.adapters.add("stroke", applyColor);
+
+                barSeries.data.setAll(typeData);
+                barSeries.appear(800);
+
+                // ---- LINE SERIES ----
+                var lineSeries = lineChart.series.push(am5xy.LineSeries.new(root, {
+                    name: type,
+                    xAxis: lineXAxis,
+                    yAxis: lineYAxis,
+                    valueYField: amountKey,
+                    categoryXField: yearKey,
+                    stroke: am5.color(typeColor)
+                }));
+
+                lineSeries.strokes.template.setAll({ strokeWidth: 3 });
+                lineSeries.bullets.push(() =>
+                    am5.Bullet.new(root, {
+                        sprite: am5.Circle.new(root, {
+                            radius: 4,
+                            fill: lineSeries.get("stroke")
+                        })
+                    })
+                );
+
+                lineSeries.data.setAll(typeData);
+                lineSeries.appear(800);
+            });
+
+            // =====================
+            // LEGENDS
+            // =====================
+            barChart.children.push(am5.Legend.new(root, {
+                centerX: am5.percent(50),
+                x: am5.percent(50)
+            })).data.setAll(barChart.series.values);
+
+            lineChart.children.push(am5.Legend.new(root, {
+                centerX: am5.percent(50),
+                x: am5.percent(50)
+            })).data.setAll(lineChart.series.values);
+        });
+        console.log("Finished setting up BOT graphs");
+}
+
     // ============================================================
     // EXECUTE (Only if elements exist)
     // ============================================================
@@ -384,6 +626,29 @@ am5.ready(function() {
     // 3. Expense Comparison
     if (document.getElementById("chart_Expense25") && document.getElementById("chart_ExpenseChange26")) {
         buildComparison("chart_Expense25", "chart_ExpenseChange26", "FY25_Expense", "FY26_Expense", true);
+    }
+
+
+    // ============================================================
+    // Page: Budget Over Time
+    // ============================================================
+    console.log("Checking for BOT elements...");
+    // 1. Operating Revenue BOT
+    if (document.getElementById("chart_budget_over_time_operating_revenue")) {
+        console.log("Building Operating Revenue BOT Graph");
+        buildBOTGraphs("chart_budget_over_time_operating_revenue", "OperatingRevenue_Over_Time", true);
+    }
+
+    // 2. Non-Operating Revenue BOT
+    if (document.getElementById("chart_budget_over_time_non_operating_revenue")) {
+        console.log("Building Non-Operating Revenue BOT Graph");
+        buildBOTGraphs("chart_budget_over_time_non_operating_revenue", "NonOperating_Over_Time", true);
+    }
+
+    // 3. Expense BOT
+    if (document.getElementById("chart_budget_over_time_expense")) {
+        console.log("Building Expense BOT Graph");
+        buildBOTGraphs("chart_budget_over_time_expense", "Expense_Over_Time", true);
     }
 
 });
