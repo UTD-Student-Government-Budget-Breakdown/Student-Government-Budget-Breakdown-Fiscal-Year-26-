@@ -1228,6 +1228,7 @@ function buildBOTGraphs(divID, datasetKey, isExpense) {
     if (document.getElementById("chart_budget_over_time_expense")) {
         console.log("Building Expense BOT Graph");
         buildBOTGraphs("chart_budget_over_time_expense", "Expense_Over_Time", true);
+    }
     // ============================================================
     // Page: Budget By School
     // ============================================================
@@ -1297,4 +1298,4 @@ function buildBOTGraphs(divID, datasetKey, isExpense) {
         buildAuxiliaryChart("parkingChart", "FY26_Auxiliary_Budget", "Parking & Transportation");
     }
 
-}});
+});
