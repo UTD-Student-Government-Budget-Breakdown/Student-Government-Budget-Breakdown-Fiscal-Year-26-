@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Fees & Tuition</title>
+    <title>Budget Over Time</title>
     
     <link rel="stylesheet" href="styles.css">
 
@@ -20,47 +20,46 @@
             <ul>
                 <li><a href="index.html">Fall 25 - Spring 26 Budget</a></li>
                 <li><a href="budgetCuts.html">Budget Cuts</a></li>
-                <li><a href="budgetOverTime.html">Budget Over Time</a></li>
-                <li><a href="studentFees.html" class="active">Student Fees</a></li>
+                <li><a href="budgetOverTime.html" class="active">Budget Over Time</a></li>
+                <li><a href="studentFees.html">Student Fees</a></li>
                 <li><a href="schoolBudgets.html">Budget by School </a></li>
                 <li><a href="aux-budget.html">Auxiliary Budget</a></li>
                 <li><a href="#">Credits</a></li>
+                
+
             </ul>
         </nav>
 
         <main class="main-content">
             <header>
-                <h1>Student Fees & Tuition</h1>
-                <p>Fiscal Year 2026</p>
+                <h1>Budget Over Time</h1>
+                <p>Comparison: 2022 - 2026</p>
             </header>
 
             <section class="charts-grid">
+                
+                <div class="chart-card comparison-card">
+                    <h3>Operating Revenue (2022-2026)</h3>
+                    
+                    <div class="year-header"></div>
+                    <div id="chart_budget_over_time_operating_revenue"></div>
 
-                <div class="chart-card">
-                    <h3>Mandatory Fee Breakdown</h3>
-                    <div id="chart_MandatoryFeeBreakdown"></div>
                 </div>
 
-                <div class="chart-card">
-                    <h3>Program, Course Related & Other Fees Breakdown</h3>
-                    <div id="chart_ProgramFeesBreakdown"></div>
+                <div class="chart-card comparison-card">
+                    <h3>Non-Operating Revenue (2022-2026)</h3>
+
+                    <div class="year-header"></div>
+                    <div id="chart_budget_over_time_non_operating_revenue"></div>
+
                 </div>
 
-                <div class="chart-card">
-                    <h3>Tuition and Student Fees</h3>
-                    <div id="chart_StudentFeesTotals"></div>
-                </div>
+                <div class="chart-card comparison-card">
+                    <h3>Expense (2022-2026)</h3>
 
-                <div class="chart-card">
-                    <h3>Tuition and Student Fees (Overview)</h3>
-                    <div id="chart_StudentFeesOverview"></div>
-                </div>
+                    <div class="year-header"></div>
+                    <div id="chart_budget_over_time_expense"></div>
 
-                <div class="chart-card">
-                    <h3>Student Fees and Tuition (Data)</h3>
-                    <div class="fees-table-wrap">
-                        <div class="fees-table" id="studentFeesTable"></div>
-                    </div>
                 </div>
 
             </section>

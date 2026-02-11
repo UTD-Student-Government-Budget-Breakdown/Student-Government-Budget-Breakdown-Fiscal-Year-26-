@@ -59,6 +59,8 @@
   { "expenseType": "Public Service", "expenseAmount": 13680719, "percentChange": -3.9, "color": "#e31a1c" }
 ],
 
+
+
 "FY26_Operating_Revenue": [
   { "revenueType": "Net Tuition and Fees", "revenueAmount": 339451172, "percentChange": -5.2, "color": "#00b18b" },
   { "revenueType": "Federal Sponsored Programs", "revenueAmount": 90193587, "percentChange": 6.2, "color": "#1ae3e1" },
@@ -169,9 +171,309 @@
   { "expenseType": "Public Service", "expenseAmount": 14231641, "color": "#e31a1c" }
 ],
 
-"_section3": "Data for Budget Over Time Page",
+"_section3": "Additional Data for Budget Over Time Page",
 
-"_section4": "Data for Student Fees Page",
+"FY22_Expense_T": [
+  { "expenseType": "Instruction", "expenseAmount": 209499127.79, "color": "#00b18b" },
+  { "expenseType": "Research", "expenseAmount": 106144984.28, "color": "#0bbbbb" },
+  { "expenseType": "Academic Support", "expenseAmount": 67115801.54, "color": "#2ad8fc" },
+  { "expenseType": "Depreciation and Amortization", "expenseAmount": 93630295.2, "color": "#1ae3e1" },
+  { "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 58604865.96, "color": "#3cacfd" },
+  { "expenseType": "Institutional Support", "expenseAmount": 39316651.13, "color": "#9ebcda" },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 43375304.51, "color": "#dabc9e" },
+  { "expenseType": "Scholarships and Fellowships", "expenseAmount": 66693403.98, "color": "#fd8d3c" },
+  { "expenseType": "Student Services", "expenseAmount": 19889441.88, "color": "#fc4e2a" },
+  { "expenseType": "Public Service", "expenseAmount": 10482937.08, "color": "#e31a1c" }
+],
+
+"FY23_Expense_T": [
+  { "expenseType": "Instruction", "expenseAmount": 220306312.14, "color": "#00b18b" },
+  { "expenseType": "Research", "expenseAmount": 114572375.22, "color": "#0bbbbb" },
+  { "expenseType": "Academic Support", "expenseAmount": 85544804.75, "color": "#2ad8fc" },
+  { "expenseType": "Depreciation and Amortization", "expenseAmount": 98596648.35, "color": "#1ae3e1" },
+  { "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 58497186.52, "color": "#3cacfd" },
+  { "expenseType": "Institutional Support", "expenseAmount": 48320753.81, "color": "#9ebcda" },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 52902891.19, "color": "#dabc9e" },
+  { "expenseType": "Scholarships and Fellowships", "expenseAmount": 41180717.37, "color": "#fd8d3c" },
+  { "expenseType": "Student Services", "expenseAmount": 23209819.15, "color": "#fc4e2a" },
+  { "expenseType": "Public Service", "expenseAmount": 13302583.91, "color": "#e31a1c" }
+],
+
+"FY24_Expense_T": [
+  { "expenseType": "Instruction", "expenseAmount": 243024569.87, "color": "#00b18b" },
+  { "expenseType": "Research", "expenseAmount": 138572237.85, "color": "#0bbbbb" },
+  { "expenseType": "Academic Support", "expenseAmount": 96570711.94, "color": "#2ad8fc" },
+  { "expenseType": "Depreciation and Amortization", "expenseAmount": 99267561.84, "color": "#1ae3e1" },
+  { "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 62487325.77, "color": "#3cacfd" },
+  { "expenseType": "Institutional Support", "expenseAmount": 52175568.26, "color": "#9ebcda" },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 54685227.78, "color": "#dabc9e" },
+  { "expenseType": "Scholarships and Fellowships", "expenseAmount": 40547315.57, "color": "#fd8d3c" },
+  { "expenseType": "Student Services", "expenseAmount": 27527552.3, "color": "#fc4e2a" },
+  { "expenseType": "Public Service", "expenseAmount": 15243003.26, "color": "#e31a1c" }
+],
+
+"FY25_Expense_T": [
+  { "expenseType": "Instruction", "expenseAmount": 268753073, "color": "#00b18b" },
+  { "expenseType": "Research", "expenseAmount": 152720704, "color": "#0bbbbb" },
+  { "expenseType": "Academic Support", "expenseAmount": 111481261, "color": "#2ad8fc" },
+  { "expenseType": "Depreciation and Amortization", "expenseAmount": 102053018, "color": "#1ae3e1" },
+  { "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 75584599, "color": "#3cacfd" },
+  { "expenseType": "Institutional Support", "expenseAmount": 65817558, "color": "#9ebcda" },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 57070460, "color": "#dabc9e" },
+  { "expenseType": "Scholarships and Fellowships", "expenseAmount": 47845331, "color": "#fd8d3c" },
+  { "expenseType": "Student Services", "expenseAmount": 29072557, "color": "#fc4e2a" },
+  { "expenseType": "Public Service", "expenseAmount": 14231641, "color": "#e31a1c" }
+],
+
+"FY26_Expense_T": [
+  { "expenseType": "Instruction", "expenseAmount": 253679835, "color": "#00b18b" },
+  { "expenseType": "Research", "expenseAmount": 153774046, "color": "#0bbbbb" },
+  { "expenseType": "Academic Support", "expenseAmount": 102917687, "color": "#2ad8fc" },
+  { "expenseType": "Depreciation and Amortization", "expenseAmount": 113744271, "color": "#1ae3e1" },
+  { "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 73180194, "color": "#3cacfd" },
+  { "expenseType": "Institutional Support", "expenseAmount": 54200026, "color": "#9ebcda" },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 54055426, "color": "#dabc9e" },
+  { "expenseType": "Scholarships and Fellowships", "expenseAmount": 52158181, "color": "#fd8d3c" },
+  { "expenseType": "Student Services", "expenseAmount": 30306846, "color": "#fc4e2a" },
+  { "expenseType": "Public Service", "expenseAmount": 13680719, "color": "#e31a1c" }
+],
+
+"FY22_NonOperating": [
+  { "expenseType": "State Appropriations", "expenseAmount": 137355030.21, "color": "#00b18b" },
+  { "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 75293737.6, "color": "#0bbbbb" },
+  { "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 1151461.17, "color": "#1ae3e1" },
+  { "expenseType": "Gifts in Support of Operations", "expenseAmount": 22128589.65, "color": "#2ad8fc" },
+  { "expenseType": "Investment Income", "expenseAmount": 45559888.24, "color": "#3cacfd" },
+  { "expenseType": "Net Change in Fair Value of Investments", "expenseAmount": -93468950.52, "color": "#9ebcda" },
+  { "expenseType": "Interest Expense on Capital Asset Financings", "expenseAmount": -533319.19, "color": "#dabc9e" },
+  { "expenseType": "Gain/Loss on Sale of Capital Assets", "expenseAmount": -756912.25, "color": "#fd8d3c" },
+  { "expenseType": "Other Nonoperating Revenues", "expenseAmount": 220814.35, "color": "#fc4e2a" }
+],
+
+"FY23_NonOperating": [
+  { "expenseType": "State Appropriations", "expenseAmount": 138282303.56, "color": "#00b18b" },
+  { "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 39396913.08, "color": "#0bbbbb" },
+  { "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 12097716.76, "color": "#1ae3e1" },
+  { "expenseType": "Gifts in Support of Operations", "expenseAmount": 16406714.81, "color": "#2ad8fc" },
+  { "expenseType": "Investment Income", "expenseAmount": 49701229.79, "color": "#3cacfd" },
+  { "expenseType": "Net Change in Fair Value of Investments", "expenseAmount": -345756.3, "color": "#9ebcda" },
+  { "expenseType": "Interest Expense on Capital Asset Financings", "expenseAmount": -556646.93, "color": "#dabc9e" },
+  { "expenseType": "Gain/Loss on Sale of Capital Assets", "expenseAmount": -119454.97, "color": "#fd8d3c" },
+  { "expenseType": "Other Nonoperating Revenues", "expenseAmount": 4263112.09, "color": "#fc4e2a" }
+],
+
+"FY24_NonOperating": [
+  { "expenseType": "State Appropriations", "expenseAmount": 188862747.8, "color": "#00b18b" },
+  { "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 39856669, "color": "#0bbbbb" },
+  { "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 3563113.64, "color": "#1ae3e1" },
+  { "expenseType": "Gifts in Support of Operations", "expenseAmount": 10699086.41, "color": "#2ad8fc" },
+  { "expenseType": "Investment Income", "expenseAmount": 68913881.7, "color": "#3cacfd" },
+  { "expenseType": "Net Change in Fair Value of Investments", "expenseAmount": 86502171.29, "color": "#9ebcda" },
+  { "expenseType": "Interest Expense on Capital Asset Financings", "expenseAmount": -610942.15, "color": "#dabc9e" },
+  { "expenseType": "Gain/Loss on Sale of Capital Assets", "expenseAmount": -1636942.8, "color": "#fd8d3c" },
+  { "expenseType": "Other Nonoperating Revenues", "expenseAmount": 1048155.32, "color": "#fc4e2a" }
+],
+
+"FY25_NonOperating": [
+  { "expenseType": "State Appropriations", "expenseAmount": 176897505, "color": "#00b18b" },
+  { "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 41450000, "color": "#0bbbbb" },
+  { "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 440500, "color": "#1ae3e1" },
+  { "expenseType": "Gifts in Support of Operations", "expenseAmount": 16453000, "color": "#2ad8fc" },
+  { "expenseType": "Investment Income", "expenseAmount": 70195107, "color": "#3cacfd" }
+],
+
+"FY26_NonOperating": [
+  { "expenseType": "State Appropriations", "expenseAmount": 177157172, "color": "#00b18b" },
+  { "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 41250000, "color": "#0bbbbb" },
+  { "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 4363794, "color": "#1ae3e1" },
+  { "expenseType": "Gifts in Support of Operations", "expenseAmount": 13585000, "color": "#2ad8fc" },
+  { "expenseType": "Investment Income", "expenseAmount": 80849605, "color": "#3cacfd" }
+],
+
+"FY22_OperatingRevenue": [
+  { "expenseType": "Net Student Tuition and Fees", "expenseAmount": 370697931.63 },
+  { "expenseType": "Sponsored Programs", "expenseAmount": 92134241.14 },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 50934943.83 },
+  { "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 39173194.39 },
+  { "expenseType": "Other Operating Revenues", "expenseAmount": 9159326.75 },
+  { "expenseType": "Discounts and Allowances", "expenseAmount": -150445560 }
+],
+
+"FY23_OperatingRevenue": [
+  { "expenseType": "Net Student Tuition and Fees", "expenseAmount": 420356980.25 },
+  { "expenseType": "Sponsored Programs", "expenseAmount": 102148948.72 },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 52120136.46 },
+  { "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 40902432.27 },
+  { "expenseType": "Other Operating Revenues", "expenseAmount": 10945394.85 },
+  { "expenseType": "Discounts and Allowances", "expenseAmount": -147182184 }
+],
+
+"FY24_OperatingRevenue": [
+  { "expenseType": "Net Student Tuition and Fees", "expenseAmount": 392652099.72 },
+  { "expenseType": "Sponsored Programs", "expenseAmount": 119583180.49 },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 59814113.75 },
+  { "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 43683602.94 },
+  { "expenseType": "Other Operating Revenues", "expenseAmount": 11673112.74 },
+  { "expenseType": "Discounts and Allowances", "expenseAmount": -155790583 }
+],
+
+"FY25_OperatingRevenue": [
+  { "expenseType": "Net Student Tuition and Fees", "expenseAmount": 374782337 },
+  { "expenseType": "Sponsored Programs", "expenseAmount": 117659539 },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 57535948 },
+  { "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 41757115 },
+  { "expenseType": "Other Operating Revenues", "expenseAmount": 12230413 },
+  { "expenseType": "Discounts and Allowances", "expenseAmount": -159751384 }
+],
+
+"FY26_OperatingRevenue": [
+  { "expenseType": "Net Student Tuition and Fees", "expenseAmount": 339451172 },
+  { "expenseType": "Sponsored Programs", "expenseAmount": 125581113 },
+  { "expenseType": "Auxiliary Enterprises", "expenseAmount": 59146129 },
+  { "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 44438798 },
+  { "expenseType": "Other Operating Revenues", "expenseAmount": 13922800 },
+  { "expenseType": "Discounts and Allowances", "expenseAmount": -167057991 }
+],
+
+"_section4": "Reformatted Data for BOT Graphs",
+
+"Expense_Over_Time": [
+  { "year": "2022", "expenseType": "Instruction", "expenseAmount": 209499127.79, "color": "#00b18b" },
+  { "year": "2023", "expenseType": "Instruction", "expenseAmount": 220306312.14, "color": "#00b18b" },
+  { "year": "2024", "expenseType": "Instruction", "expenseAmount": 243024569.87, "color": "#00b18b" },
+  { "year": "2025", "expenseType": "Instruction", "expenseAmount": 268753073, "color": "#00b18b" },
+  { "year": "2026", "expenseType": "Instruction", "expenseAmount": 253679835, "color": "#00b18b" },
+
+  { "year": "2022", "expenseType": "Research", "expenseAmount": 106144984.28, "color": "#0bbbbb" },
+  { "year": "2023", "expenseType": "Research", "expenseAmount": 114572375.22, "color": "#0bbbbb" },
+  { "year": "2024", "expenseType": "Research", "expenseAmount": 138572237.85, "color": "#0bbbbb" },
+  { "year": "2025", "expenseType": "Research", "expenseAmount": 152720704, "color": "#0bbbbb" },
+  { "year": "2026", "expenseType": "Research", "expenseAmount": 153774046, "color": "#0bbbbb" },
+
+  { "year": "2022", "expenseType": "Academic Support", "expenseAmount": 67115801.54, "color": "#2ad8fc" },
+  { "year": "2023", "expenseType": "Academic Support", "expenseAmount": 85544804.75, "color": "#2ad8fc" },
+  { "year": "2024", "expenseType": "Academic Support", "expenseAmount": 96570711.94, "color": "#2ad8fc" },
+  { "year": "2025", "expenseType": "Academic Support", "expenseAmount": 111481261, "color": "#2ad8fc" },
+  { "year": "2026", "expenseType": "Academic Support", "expenseAmount": 102917687, "color": "#2ad8fc" },
+
+  { "year": "2022", "expenseType": "Depreciation and Amortization", "expenseAmount": 93630295.2, "color": "#1ae3e1" },
+  { "year": "2023", "expenseType": "Depreciation and Amortization", "expenseAmount": 98596648.35, "color": "#1ae3e1" },
+  { "year": "2024", "expenseType": "Depreciation and Amortization", "expenseAmount": 99267561.84, "color": "#1ae3e1" },
+  { "year": "2025", "expenseType": "Depreciation and Amortization", "expenseAmount": 102053018, "color": "#1ae3e1" },
+  { "year": "2026", "expenseType": "Depreciation and Amortization", "expenseAmount": 113744271, "color": "#1ae3e1" },
+
+  { "year": "2022", "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 58604865.96, "color": "#3cacfd" },
+  { "year": "2023", "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 58497186.52, "color": "#3cacfd" },
+  { "year": "2024", "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 62487325.77, "color": "#3cacfd" },
+  { "year": "2025", "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 75584599, "color": "#3cacfd" },
+  { "year": "2026", "expenseType": "Operation and Maintenance of Plant", "expenseAmount": 73180194, "color": "#3cacfd" },
+
+  { "year": "2022", "expenseType": "Institutional Support", "expenseAmount": 39316651.13, "color": "#9ebcda" },
+  { "year": "2023", "expenseType": "Institutional Support", "expenseAmount": 48320753.81, "color": "#9ebcda" },
+  { "year": "2024", "expenseType": "Institutional Support", "expenseAmount": 52175568.26, "color": "#9ebcda" },
+  { "year": "2025", "expenseType": "Institutional Support", "expenseAmount": 65817558, "color": "#9ebcda" },
+  { "year": "2026", "expenseType": "Institutional Support", "expenseAmount": 54200026, "color": "#9ebcda" },
+
+  { "year": "2022", "expenseType": "Auxiliary Enterprises", "expenseAmount": 43375304.51, "color": "#dabc9e" },
+  { "year": "2023", "expenseType": "Auxiliary Enterprises", "expenseAmount": 52902891.19, "color": "#dabc9e" },
+  { "year": "2024", "expenseType": "Auxiliary Enterprises", "expenseAmount": 54685227.78, "color": "#dabc9e" },
+  { "year": "2025", "expenseType": "Auxiliary Enterprises", "expenseAmount": 57070460, "color": "#dabc9e" },
+  { "year": "2026", "expenseType": "Auxiliary Enterprises", "expenseAmount": 54055426, "color": "#dabc9e" },
+
+  { "year": "2022", "expenseType": "Scholarships and Fellowships", "expenseAmount": 66693403.98, "color": "#fd8d3c" },
+  { "year": "2023", "expenseType": "Scholarships and Fellowships", "expenseAmount": 41180717.37, "color": "#fd8d3c" },
+  { "year": "2024", "expenseType": "Scholarships and Fellowships", "expenseAmount": 40547315.57, "color": "#fd8d3c" },
+  { "year": "2025", "expenseType": "Scholarships and Fellowships", "expenseAmount": 47845331, "color": "#fd8d3c" },
+  { "year": "2026", "expenseType": "Scholarships and Fellowships", "expenseAmount": 52158181, "color": "#fd8d3c" },
+
+  { "year": "2022", "expenseType": "Student Services", "expenseAmount": 19889441.88, "color": "#fc4e2a" },
+  { "year": "2023", "expenseType": "Student Services", "expenseAmount": 23209819.15, "color": "#fc4e2a" },
+  { "year": "2024", "expenseType": "Student Services", "expenseAmount": 27527552.3, "color": "#fc4e2a" },
+  { "year": "2025", "expenseType": "Student Services", "expenseAmount": 29072557, "color": "#fc4e2a" },
+  { "year": "2026", "expenseType": "Student Services", "expenseAmount": 30306846, "color": "#fc4e2a" },
+
+  { "year": "2022", "expenseType": "Public Service", "expenseAmount": 10482937.08, "color": "#e31a1c" },
+  { "year": "2023", "expenseType": "Public Service", "expenseAmount": 13302583.91, "color": "#e31a1c" },
+  { "year": "2024", "expenseType": "Public Service", "expenseAmount": 15243003.26, "color": "#e31a1c" },
+  { "year": "2025", "expenseType": "Public Service", "expenseAmount": 14231641, "color": "#e31a1c" },
+  { "year": "2026", "expenseType": "Public Service", "expenseAmount": 13680719, "color": "#e31a1c" }
+],
+
+"NonOperating_Over_Time": [
+  { "year": "2022", "expenseType": "State Appropriations", "expenseAmount": 137355030.21, "color": "#00b18b" },
+  { "year": "2022", "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 75293737.6, "color": "#0bbbbb" },
+  { "year": "2022", "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 1151461.17, "color": "#1ae3e1" },
+  { "year": "2022", "expenseType": "Gifts in Support of Operations", "expenseAmount": 22128589.65, "color": "#2ad8fc" },
+  { "year": "2022", "expenseType": "Investment Income", "expenseAmount": 45559888.24, "color": "#3cacfd" },
+  { "year": "2022", "expenseType": "Net Change in Fair Value of Investments", "expenseAmount": -93468950.52, "color": "#9ebcda" },
+  { "year": "2022", "expenseType": "Interest Expense on Capital Asset Financings", "expenseAmount": -533319.19, "color": "#dabc9e" },
+  { "year": "2022", "expenseType": "Gain/Loss on Sale of Capital Assets", "expenseAmount": -756912.25, "color": "#fd8d3c" },
+  { "year": "2022", "expenseType": "Other Nonoperating Revenues", "expenseAmount": 220814.35, "color": "#fc4e2a" },
+
+  { "year": "2023", "expenseType": "State Appropriations", "expenseAmount": 138282303.56, "color": "#00b18b" },
+  { "year": "2023", "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 39396913.08, "color": "#0bbbbb" },
+  { "year": "2023", "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 12097716.76, "color": "#1ae3e1" },
+  { "year": "2023", "expenseType": "Gifts in Support of Operations", "expenseAmount": 16406714.81, "color": "#2ad8fc" },
+  { "year": "2023", "expenseType": "Investment Income", "expenseAmount": 49701229.79, "color": "#3cacfd" },
+  { "year": "2023", "expenseType": "Net Change in Fair Value of Investments", "expenseAmount": -345756.3, "color": "#9ebcda" },
+  { "year": "2023", "expenseType": "Interest Expense on Capital Asset Financings", "expenseAmount": -556646.93, "color": "#dabc9e" },
+  { "year": "2023", "expenseType": "Gain/Loss on Sale of Capital Assets", "expenseAmount": -119454.97, "color": "#fd8d3c" },
+  { "year": "2023", "expenseType": "Other Nonoperating Revenues", "expenseAmount": 4263112.09, "color": "#fc4e2a" },
+
+  { "year": "2024", "expenseType": "State Appropriations", "expenseAmount": 188862747.8, "color": "#00b18b" },
+  { "year": "2024", "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 39856669, "color": "#0bbbbb" },
+  { "year": "2024", "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 3563113.64, "color": "#1ae3e1" },
+  { "year": "2024", "expenseType": "Gifts in Support of Operations", "expenseAmount": 10699086.41, "color": "#2ad8fc" },
+  { "year": "2024", "expenseType": "Investment Income", "expenseAmount": 68913881.7, "color": "#3cacfd" },
+  { "year": "2024", "expenseType": "Net Change in Fair Value of Investments", "expenseAmount": 86502171.29, "color": "#9ebcda" },
+  { "year": "2024", "expenseType": "Interest Expense on Capital Asset Financings", "expenseAmount": -610942.15, "color": "#dabc9e" },
+  { "year": "2024", "expenseType": "Gain/Loss on Sale of Capital Assets", "expenseAmount": -1636942.8, "color": "#fd8d3c" },
+  { "year": "2024", "expenseType": "Other Nonoperating Revenues", "expenseAmount": 1048155.32, "color": "#fc4e2a" },
+
+  { "year": "2025", "expenseType": "State Appropriations", "expenseAmount": 176897505, "color": "#00b18b" },
+  { "year": "2025", "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 41450000, "color": "#0bbbbb" },
+  { "year": "2025", "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 440500, "color": "#1ae3e1" },
+  { "year": "2025", "expenseType": "Gifts in Support of Operations", "expenseAmount": 16453000, "color": "#2ad8fc" },
+  { "year": "2025", "expenseType": "Investment Income", "expenseAmount": 70195107, "color": "#3cacfd" },
+
+  { "year": "2026", "expenseType": "State Appropriations", "expenseAmount": 177157172, "color": "#00b18b" },
+  { "year": "2026", "expenseType": "Federal Sponsored Programs (Nonoperating)", "expenseAmount": 41250000, "color": "#0bbbbb" },
+  { "year": "2026", "expenseType": "State & Local Sponsored Programs (Nonoperating)", "expenseAmount": 4363794, "color": "#1ae3e1" },
+  { "year": "2026", "expenseType": "Gifts in Support of Operations", "expenseAmount": 13585000, "color": "#2ad8fc" },
+  { "year": "2026", "expenseType": "Investment Income", "expenseAmount": 80849605, "color": "#3cacfd" }
+],
+
+"OperatingRevenue_Over_Time": [
+  { "year": "2022", "expenseType": "Net Student Tuition and Fees", "expenseAmount": 370697931.63, "color": "#00b18b"  },
+  { "year": "2023", "expenseType": "Net Student Tuition and Fees", "expenseAmount": 420356980.25, "color": "#00b18b" },
+  { "year": "2024", "expenseType": "Net Student Tuition and Fees", "expenseAmount": 392652099.72, "color": "#00b18b" },
+  { "year": "2025", "expenseType": "Net Student Tuition and Fees", "expenseAmount": 374782337, "color": "#00b18b" },
+  { "year": "2026", "expenseType": "Net Student Tuition and Fees", "expenseAmount": 339451172, "color": "#00b18b" },
+
+  { "year": "2022", "expenseType": "Sponsored Programs", "expenseAmount": 92134241.14, "color": "#1ae3e1" },
+  { "year": "2023", "expenseType": "Sponsored Programs", "expenseAmount": 102148948.72, "color": "#1ae3e1" },
+  { "year": "2024", "expenseType": "Sponsored Programs", "expenseAmount": 119583180.49, "color": "#1ae3e1" },
+  { "year": "2025", "expenseType": "Sponsored Programs", "expenseAmount": 117659539, "color": "#1ae3e1" },
+  { "year": "2026", "expenseType": "Sponsored Programs", "expenseAmount": 125581113, "color": "#1ae3e1" },
+
+  { "year": "2022", "expenseType": "Auxiliary Enterprises", "expenseAmount": 50934943.83, "color": "#9ebcda" },
+  { "year": "2023", "expenseType": "Auxiliary Enterprises", "expenseAmount": 52120136.46, "color": "#9ebcda" },
+  { "year": "2024", "expenseType": "Auxiliary Enterprises", "expenseAmount": 59814113.75, "color": "#9ebcda" },
+  { "year": "2025", "expenseType": "Auxiliary Enterprises", "expenseAmount": 57535948, "color": "#9ebcda" },
+  { "year": "2026", "expenseType": "Auxiliary Enterprises", "expenseAmount": 59146129, "color": "#9ebcda" },
+
+  { "year": "2022", "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 39173194.39, "color": "#fd8d3c" },
+  { "year": "2023", "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 40902432.27, "color": "#fd8d3c" },
+  { "year": "2024", "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 43683602.94, "color": "#fd8d3c" },
+  { "year": "2025", "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 41757115, "color": "#fd8d3c" },
+  { "year": "2026", "expenseType": "Sales and Services of Educational Activities", "expenseAmount": 44438798, "color": "#fd8d3c" },
+
+  { "year": "2022", "expenseType": "Other Operating Revenues", "expenseAmount": 9159326.75, "color": "#fc4e2a" },
+  { "year": "2023", "expenseType": "Other Operating Revenues", "expenseAmount": 10945394.85, "color": "#fc4e2a" },
+  { "year": "2024", "expenseType": "Other Operating Revenues", "expenseAmount": 11673112.74, "color": "#fc4e2a" },
+  { "year": "2025", "expenseType": "Other Operating Revenues", "expenseAmount": 12230413, "color": "#fc4e2a" },
+  { "year": "2026", "expenseType": "Other Operating Revenues", "expenseAmount": 13922800, "color": "#fc4e2a" }
+],
 
 "_section5": "Data for Budget by School Page",
 
