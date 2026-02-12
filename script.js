@@ -1252,12 +1252,27 @@ function buildBOTGraphs(divID, datasetKey, isExpense) {
         buildExpensesGraphs("chart_AHT_Expenses");
     }
 
-    // 4. AHT Revenue
+    // 4. BBS Expenses
+    if (document.getElementById("chart_BBS_Expenses")) {
+        buildExpensesGraphs("chart_BBS_Expenses");
+    }
+    
+    // 5. EPPS Expenses
+    if (document.getElementById("chart_EPPS_Expenses")) {
+        buildExpensesGraphs("chart_EPPS_Expenses");
+    }
+
+    // 6. IS Expenses
+    if (document.getElementById("chart_IS_Expenses")) {
+        buildExpensesGraphs("chart_IS_Expenses");
+    }
+
+    // 7. AHT Revenue
     if (document.getElementById("chart_AHT_Revenue")) {
         buildRevenueGraphs("chart_AHT_Revenue");
     }
 
-    // 5. Expenses By School
+    // 8. Expenses By School
     if (document.getElementById("chart_Expenses_School")) {
         buildExpensesBySchoolGraph("chart_Expenses_School");
     }
